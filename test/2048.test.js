@@ -1,4 +1,4 @@
-import Game2048 from './2048.js';
+const Game2048 = require('../src/games/2048/2048.js');
 
 describe('2048 Game', () => {
   beforeEach(() => {
@@ -19,4 +19,4 @@ describe('2048 Game', () => {
     const totalCells = game.grid.flat().filter(cell => cell > 0).length;
     expect(totalCells).toBeGreaterThanOrEqual(2);
   });
-});
+}); 

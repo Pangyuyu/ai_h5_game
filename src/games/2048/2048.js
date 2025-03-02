@@ -187,9 +187,20 @@ class Game2048 {
   }
 }
 
+// 如果在浏览器环境中，将 Game2048 添加到全局对象
+if (typeof window !== 'undefined') {
+    window.Game2048 = Game2048;
+}
+
+// 同时支持 CommonJS 和 ES 模块
 export default Game2048;
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = Game2048;
+}
 
 // 添加DOM加载完成后的初始化
-document.addEventListener('DOMContentLoaded', () => {
-  new Game2048();
-});
+if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', () => {
+        new Game2048();
+    });
+}
