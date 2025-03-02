@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>小游戏合集</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #2c3e50;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ecf0f1;
+            margin-bottom: 40px;
+        }
+
+        .game-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .game-card {
+            width: calc(33.33% - 13.33px);
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .game-card {
+                width: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .game-card {
+                width: 100%;
+            }
+        }
+
+        .game-link {
+            text-decoration: none;
+        }
+
+        .game-card {
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .game-card.placeholder {
+            background-color: transparent;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .game-card.coming-soon {
+            background-color: #3a506b;
+            opacity: 0.8;
+        }
+
+        .game-card:hover:not(.placeholder) {
+            transform: scale(1.05);
+        }
+
+        .game-card h2 {
+            color: #2ecc71;
+            margin-bottom: 10px;
+        }
+
+        .game-card.coming-soon h2 {
+            color: #95a5a6;
+        }
+
+        .game-card p {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-container">
+        <h1>欢迎来到小游戏合集</h1>
+        <div class="game-list">
+
+            <div class="game-card">
+                <a href="./src/games/snake/snake.html" class="game-link">
+                    <div style="padding: 20px; width: 100%; height: 100%; box-sizing: border-box;">
+                        <h2 style="margin-top: 0;">经典贪吃蛇</h2>
+                        <p style="margin-bottom: 0;">使用方向键控制蛇的移动，吃掉食物获得分数，小心不要撞到自己！</p>
+                    </div>
+                </a>
+            </div>
+            <div class="game-card">
+                <a href="./src/games/tetris/tetris.html" class="game-link">
+                    <div style="padding: 20px; width: 100%; height: 100%; box-sizing: border-box;">
+                        <h2 style="margin-top: 0;">俄罗斯方块</h2>
+                        <p style="margin-bottom: 0;">操控下落的方块，填满整行即可消除，挑战你的反应速度！</p>
+                    </div>
+                </a>
+               
+            </div>
+            <div class="game-card">
+                <a href="./src/games/minesweeper/minesweeper.html" class="game-link">
+                    <div style="padding: 20px; width: 100%; height: 100%; box-sizing: border-box;">
+                        <h2 style="margin-top: 0;">扫雷</h2>
+                        <p style="margin-bottom: 0;">通过数字提示找出所有地雷，考验你的逻辑推理能力！</p>
+                    </div>
+                </a>
+            </div>
+            <div class="game-card">
+                <a href="./src/games/breakout/breakout.html" class="game-link">
+                    <div style="padding: 20px; width: 100%; height: 100%; box-sizing: border-box;">
+                        <h2 style="margin-top: 0;">打砖块</h2>
+                        <p style="margin-bottom: 0;">控制挡板反弹小球，击碎所有砖块，体验经典街机乐趣！</p>
+                    </div>
+                </a>
+            </div>
+            <div class="game-card">
+                <a href="./src/games/2048/2048.html" class="game-link">
+                    <div style="padding: 20px; width: 100%; height: 100%; box-sizing: border-box;">
+                        <h2 style="margin-top: 0;">2048</h2>
+                        <p style="margin-bottom: 0;">滑动数字方块，合并相同数字，挑战你的数学思维！</p>
+                    </div>
+                </a>
+            </div>
+            <div class="game-card placeholder"></div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.coming-soon').forEach(card => {
+            card.addEventListener('click', () => {
+                alert('敬请期待！');
+            });
+        });
+    </script>
+</body>
+
+</html>

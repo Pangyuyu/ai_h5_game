@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>2048</title>
+    <link rel="stylesheet" href="./2048.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>2048</h1>
+        <div class="game-info">
+            <div class="score">得分：<span id="score">0</span></div>
+            <button id="restartBtn">重新开始</button>
+        </div>
+        <div class="game-board" id="gameBoard"></div>
+        <button onclick="goBack()">返回主页面</button>
+
+<script>
+function goBack() {
+    // 优先使用浏览器历史记录
+    if (history.length > 1) {
+        history.back();
+    } else {
+        // 备用方案：直接跳转主页面
+        window.location.href = '../../../index.html';
+    }
+}
+</script>
+    </div>
+<script type="module" src="./2048.js"></script>
+</body>
+</html>

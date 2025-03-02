@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>扫雷</title>
+    <link rel="stylesheet" href="./minesweeper.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>扫雷</h1>
+        <div class="game-board" id="gameBoard"></div>
+        <div class="game-controls">
+            <button id="restartBtn">重新开始</button>
+            <button onclick="goBack()">返回主页面11</button>
+
+
+            <div class="status">剩余地雷：<span id="mineCount">10</span></div>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            if (history.length > 1) {
+                history.back();
+            } else {
+                window.location.href = '../../../index.html';
+            }
+        }
+    </script>
+    <script src="./minesweeper.js"></script>
+</body>
+
+</html>

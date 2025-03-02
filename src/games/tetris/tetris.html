@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>俄罗斯方块</title>
+    <link rel="stylesheet" href="tetris.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>俄罗斯方块</h1>
+        <div class="game-info">
+            <div class="score">得分：<span id="score">0</span></div>
+            <button id="restartBtn">重新开始</button>
+        </div>
+        <div class="game-area">
+            <div class="grid" id="gameGrid"></div>
+            <div class="next-piece">
+                <h3>下一个</h3>
+                <div class="mini-grid" id="nextPiece"></div>
+            </div>
+        </div>
+        <button onclick="goBack()">返回主页面</button>
+
+        <script>
+            function goBack() {
+                if (history.length > 1) {
+                    history.back();
+                } else {
+                    window.location.href = '../../../index.html';
+                }
+            }
+        </script>
+        <script src="tetris.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>打砖块</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>打砖块</h1>
+        <div class="game-area">
+            <div class="paddle" id="paddle"></div>
+            <div class="ball" id="ball"></div>
+            <div class="bricks" id="bricks"></div>
+        </div>
+        <div class="game-controls">
+            <div class="score">得分：<span id="score">0</span></div>
+            <button id="restartBtn">重新开始</button>
+            <button onclick="goBack()">返回主页面</button>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            if (history.length > 1) {
+                history.back();
+            } else {
+                window.location.href = '../../../index.html';
+            }
+        }
+    </script>
+    <script src="./breakout.js"></script>
+</body>
+
+</html>
