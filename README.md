@@ -13,6 +13,7 @@
 
 ## 功能特性
 
+- 绝大部分代码都是由AI生成的
 - 纯原生JavaScript实现
 - 响应式布局设计
 - 模块化代码结构
@@ -88,3 +89,41 @@ npm test
 
 ## 许可证
 [MIT License](LICENSE)
+
+## AI编程补充说明
+**非常非常耗费Tokens，尝试之前，要谨慎**
+- AI服务商
+  - [火山引擎](https://www.volcengine.com/experience/ark?utm_term=202502dsinvite&ac=DSASUQY5&rc=DEYXL6M9)
+  - [派欧算力群](https://ppinfra.com/user/register?invited_by=720CRX)
+  - [硅基流动](https://cloud.siliconflow.cn/i/cJFFbYk0)
+  之所以选择这三家，是因为它们有赠送的tokens。记住，这个非常重要
+- 模型
+  - deepseek-v1
+  - deepseek-r3
+  v1比r3好。
+  比如俄罗斯方块，r3经过多次提醒，都没成功；v1成功了。
+- 测试项目类型：纯前端
+- 编程工具：vs code
+- 编程插件
+  - Cline
+  - AI CODE
+  原先使用的Cline，后来转向了AI CODE,因为这个是汉化版的，比较友好
+- 体验感受-优点
+  - AI确实可以编程；
+  - 可以协助创建单元测试；
+  - 回复详细
+  - 任务完成后会有总结
+  - 支持自定义Open AI 兼容的模型
+  - 可以设置价格，实时看到耗费的Money
+- 体验感受-缺点
+  - 非常非常耗费tokens,简单的demo,都需要百万tokens;
+  - 完全让AI代理处理事务不可行，有些事务会陷入死循环；
+  - 对某些任务（如解决node.js版本冲突、修改复杂代码）处理不好；
+  - 在纯净操作系统中，配置node.js环境，安装各种包，还是一如既往的不顺畅；需要人工介入
+- 建议
+  - 完全零基础的很难操作AI，有些Bug还是需要自己调试；
+  - 明确的问题，明确的需求；
+  - 对学习编程有价值，但是线上项目持保守态度；
+
+**最后再次强调：非常非常非常耗费tokens,天量的tokens**
+  
