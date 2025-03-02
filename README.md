@@ -23,8 +23,8 @@
 
 ### 安装依赖
 ```bash
-git clone https://github.com/your-username/h5-01.git
-cd h5-01
+git clone git@github.com:Pangyuyu/ai_h5_game.git
+cd ai_h5_game
 npm install
 ```
 
