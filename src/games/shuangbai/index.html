@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>双摆模拟器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <canvas id="pendulumCanvas" width="800" height="800"></canvas>
+        <div class="controls">
+            <div class="control-group">
+                <label>摆长1：<input type="number" id="length1" value="150"></label>
+                <label>摆长2：<input type="number" id="length2" value="150"></label>
+            </div>
+            <div class="control-group">
+                <label>质量1：<input type="number" id="mass1" value="10"></label>
+                <label>质量2：<input type="number" id="mass2" value="10"></label>
+            </div>
+            <div class="control-group">
+                <label>速度系数：
+                    <input type="range" id="timeScale" min="0.1" max="20" step="0.1" value="1">
+                    <input type="number" id="timeScaleValue" min="0.1" max="20" step="0.1" value="1" style="width: 60px">
+                </label>
+            </div>
+            <button id="restart">重新开始</button>
+        </div>
+    </div>
+    <script src="dynamics.js"></script>
+</body>
+</html>
